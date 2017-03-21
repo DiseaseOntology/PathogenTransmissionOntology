@@ -3,6 +3,7 @@ date: 06:02:2008 14:52
 saved-by: Lynn
 auto-generated-by: OBO-Edit 1.101
 default-namespace: transmission_process
+ontology: trans
 
 [Term]
 id: TRANS:0000000
