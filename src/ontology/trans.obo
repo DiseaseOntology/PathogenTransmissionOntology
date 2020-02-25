@@ -1,10 +1,12 @@
 format-version: 1.2
-data-version: releases/2014-08-23
+data-version: releases/2020-02-20
 date: 06:02:2008 14:52
 saved-by: Lynn
 auto-generated-by: OBO-Edit 1.101
 default-namespace: transmission_process
+remark: http://purl.obolibrary.org/obo/trans.owl/
 ontology: trans
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/ xsd:string
 
 [Term]
 id: TRANS:0000000
@@ -37,7 +39,7 @@ is_obsolete: true
 [Term]
 id: TRANS:0000005
 name: vector-borne
-def: "Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks." [REF:lschriml, URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf]
+def: "Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks." [REF:lschriml, URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf, URL:https\://en.wikipedia.org/wiki/Vector_(epidemiology)]
 is_a: TRANS:0000002 ! indirect
 
 [Term]
