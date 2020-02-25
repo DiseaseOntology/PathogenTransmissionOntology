@@ -13,12 +13,12 @@ property_value: http://purl.org/dc/terms/license https://creativecommons.org/pub
 [Term]
 id: TRANS:0000000
 name: transmission process
-def: "A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host." [URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf]
+def: "A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host." [URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf, URL:https\://courses.lumenlearning.com/microbiology/chapter/modes-of-disease-transmission/]
 
 [Term]
 id: TRANS:0000001
 name: direct
-def: "Direct transmission is a transmission process that is the means during which the pathogen is transmitted immediately from a reservoir, source or host to another host." [Gemina:lschriml, URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf]
+def: "Direct transmission is a transmission process that is the means during which the pathogen is transmitted immediately from a reservoir, source or host to another host." [Gemina:lschriml, URL:http\://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf, URL:https\://dhss.delaware.gov/dph/files/directindtranspi.pdf]
 is_a: TRANS:0000000 ! transmission process
 
 [Term]
