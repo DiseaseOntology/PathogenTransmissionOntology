@@ -166,6 +166,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>URL:https://courses.lumenlearning.com/microbiology/chapter/modes-of-disease-transmission/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -185,6 +186,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct transmission is a transmission process that is the means during which the pathogen is transmitted immediately from a reservoir, source or host to another host.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gemina:lschriml</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>URL:https://dhss.delaware.gov/dph/files/directindtranspi.pdf</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
