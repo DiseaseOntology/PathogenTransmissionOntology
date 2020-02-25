@@ -10,13 +10,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/trans.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/trans/releases/2014-08-23/trans.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/trans/releases/2020-02-20/trans.owl"/>
+        <rdfs:comment rdf:resource="http://purl.obolibrary.org/obo/trans.owl/"/>
         <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06:02:2008 14:52</oboInOwl:date>
         <terms:license>https://creativecommons.org/publicdomain/zero/1.0/</terms:license>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 1.101</oboInOwl:auto-generated-by>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lynn</oboInOwl:saved-by>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transmission_process</oboInOwl:default-namespace>
-        <rdfs:comment rdf:resource=""/>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</oboInOwl:hasOBOFormatVersion>
     </owl:Ontology>
     
