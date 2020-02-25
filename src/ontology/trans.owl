@@ -233,6 +233,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REF:lschriml</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www2a.cdc.gov/phtn/catalog/pdf-file/Epi_Course.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>URL:https://en.wikipedia.org/wiki/Vector_(epidemiology)</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
