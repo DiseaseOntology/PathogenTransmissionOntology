@@ -6,6 +6,8 @@ auto-generated-by: OBO-Edit 1.101
 default-namespace: transmission_process
 remark: http://purl.obolibrary.org/obo/trans.owl/
 ontology: trans
+property_value: http://purl.org/dc/elements/1.1/description "The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Pathogen Transmission Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/ xsd:string
 
 [Term]
@@ -33,7 +35,7 @@ is_a: TRANS:0000005 ! vector-borne
 
 [Term]
 id: TRANS:0000004
-name: unknown
+name: obsolete unknown
 is_obsolete: true
 
 [Term]
@@ -106,12 +108,12 @@ is_a: TRANS:0000005 ! vector-borne
 
 [Term]
 id: TRANS:0000016
-name: undocumented
+name: obsolete undocumented
 is_obsolete: true
 
 [Term]
 id: TRANS:0000017
-name: not curated
+name: obsolete not curated
 is_obsolete: true
 
 [Term]
