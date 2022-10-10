@@ -11,7 +11,7 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/trans.owl>
-<http://purl.obolibrary.org/obo/trans/releases/2020-08-04/trans.owl>
+<http://purl.obolibrary.org/obo/trans/releases/2022-10-10/trans.owl>
 Annotation(obo:IAO_0000700 obo:TRANS_0000000)
 Annotation(dc:description "The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles.")
 Annotation(dc:title "Pathogen Transmission Ontology")

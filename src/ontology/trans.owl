@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/trans.owl/"
-     xml:base="http://purl.obolibrary.org/obo/trans.owl/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/trans.owl#"
+     xml:base="http://purl.obolibrary.org/obo/trans.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/trans.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/trans/releases/2020-08-04/trans.owl"/>
-        <dc:title>Pathogen Transmission Ontology</dc:title>
-        <rdfs:comment rdf:resource="http://purl.obolibrary.org/obo/trans.owl/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06:02:2008 14:52</oboInOwl:date>
-        <terms:license>https://creativecommons.org/publicdomain/zero/1.0/</terms:license>
-        <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 1.101</oboInOwl:auto-generated-by>
-        <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lynn</oboInOwl:saved-by>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/trans/releases/2022-10-10/trans.owl"/>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
         <dc:description>The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles.</dc:description>
+        <dc:title>Pathogen Transmission Ontology</dc:title>
+        <terms:license>https://creativecommons.org/publicdomain/zero/1.0/</terms:license>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:10:2022 13:01</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transmission_process</oboInOwl:default-namespace>
-        <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:saved-by>
+        <rdfs:comment rdf:resource="http://purl.obolibrary.org/obo/trans.owl/"/>
     </owl:Ontology>
     
 
@@ -40,6 +40,14 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
+        <rdfs:label xml:lang="en">has ontology root term</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -221,7 +229,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical transmission is an indirect vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by being transported on the external surface of the vector.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -251,7 +259,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vector_(epidemiology)</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -414,7 +422,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000014"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector-borne bite transmission is an indirect vector-borne transmission during which the pathogen is indirectly transferred by insect bites from a reservoir, source or host via a vector to another host.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -655,7 +663,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000028"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Propagative transmission is an indirect vector-borne biological transmission process during which the pathogen that is ingested with the blood meal undergoes simple multiplication in the body of the vector.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -673,7 +681,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000029"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Cyclopropagative transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes a developmental cycle (changes from one stage to another) as well as multiplication in the body of the vector.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -691,7 +699,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000030"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Cyclodevelopmental transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes developmental changes from one stage to another, but does not multiply.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -709,7 +717,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000031"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Transovarial transmission is an indirect vector-borne biological transmission process during which the pathogen is transmitted from the female parent through the eggs to the offspring and the developing egg is infected.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -727,7 +735,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000032"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Vertical transmission is an indirect vector-borne biological transmission process during which the pathogen is transmitted from the female parent through the eggs to the offspring. Only the ovarial sheath and oviduct are infected.  The egg becomes infected as it passes down the oviduct and is inseminated.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -745,7 +753,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000033"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Trans-stadial transmission is an indirect vector-borne biological transmission process during which the newly hatched larval stages are infected with the pathogen, which is then transmitted to subsequent development stages of the vector.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -763,11 +771,11 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000034"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Veneral transmission is an indirect vector-borne biological transmission process during which the pathogen is transferred to uninfected female vectors in the seminal fluid during copulation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oie.int/doc/ged/D6818.PDF</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
