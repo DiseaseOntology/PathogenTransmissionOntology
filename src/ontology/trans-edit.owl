@@ -15,7 +15,7 @@ Ontology(<http://purl.obolibrary.org/obo/trans.owl>
 Annotation(obo:IAO_0000700 obo:TRANS_0000000)
 Annotation(dc:description "The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles.")
 Annotation(dc:title "Pathogen Transmission Ontology")
-Annotation(terms:license "https://creativecommons.org/publicdomain/zero/1.0/")
+Annotation(terms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:default-namespace "transmission_process"^^xsd:string)
 Annotation(oboInOwl:hasOBOFormatVersion "1.2"^^xsd:string)
 Annotation(oboInOwl:saved-by "lschriml"^^xsd:string)
