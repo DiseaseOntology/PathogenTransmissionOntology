@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/trans.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/trans.owl/>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -18,7 +18,6 @@ Annotation(terms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:default-namespace "transmission_process")
 Annotation(oboInOwl:hasOBOFormatVersion "1.2")
 Annotation(oboInOwl:saved-by "lschriml")
-Annotation(rdfs:comment <http://purl.obolibrary.org/obo/trans.owl/>)
 
 Declaration(Class(obo:TRANS_0000000))
 Declaration(Class(obo:TRANS_0000001))
