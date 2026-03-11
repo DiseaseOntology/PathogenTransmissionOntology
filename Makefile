@@ -122,25 +122,6 @@ ci_test: reason report verify-edit
 
 test: ci_test diff
 
-# Report for general issues on *-edit
-report: build/reports/report-obo.tsv build/reports/report.tsv
-
-.PRECIOUS: build/reports/report-obo.tsv build/reports/report.tsv
-build/reports/report-obo.tsv: $(EDIT) | check_robot build/reports
-	@echo -e "\n## OBO dashboard QC report\nFull report at $@"
-	@$(ROBOT) report \
-	 --input $< \
-	 --labels true \
-	 --output $@
-
-build/reports/report.tsv: $(EDIT) src/sparql/report/report_profile.txt | check_robot build/reports
-	@echo -e "\n## ${ONT}-edit QC report\nFull report at $@"
-	@$(ROBOT) report \
-	 --input $< \
-	 --profile $(word 2,$^) \
-	 --labels true \
-	 --output $@
-
 # Simple reasoning test
 reason: build/$(ONT)-edit-reasoned.owl
 
@@ -152,6 +133,33 @@ build/$(ONT)-edit-reasoned.owl: $(EDIT) | check_robot build
 	 --exclude-duplicate-axioms true \
 	 --output $@
 	@echo -e "\n## Reasoning completed successfully!"
+
+# QC reports for *-edit.owl (.ok files ensure errors are blocking)
+report: build/reports/report-obo.tsv build/reports/report.tsv
+
+.PHONY: build/reports/report-obo.tsv build/reports/report.tsv
+build/reports/report-obo.tsv: build/reports/temp/report-obo.tsv.ok
+build/reports/report.tsv: build/reports/temp/report.tsv.ok
+
+build/reports/temp/report-obo.tsv.ok: $(EDIT) | check_robot build/reports/temp
+	@REPORT=build/reports/$(notdir $(basename $@)); \
+	 echo -e "\n## OBO QC report ##\nFull report at $$REPORT" ; \
+	$(ROBOT) report \
+	 --input $< \
+	 --labels false \
+	 --output $$REPORT && \
+	touch $@
+
+build/reports/temp/report.tsv.ok: $(EDIT) src/sparql/report/report_profile.txt | \
+  check_robot build/reports/temp
+	@REPORT=build/reports/$(notdir $(basename $@)); \
+	 echo -e "\n## $(ONT)-edit QC report ##\nFull report at $$REPORT\n" ; \
+	$(ROBOT) report \
+	 --input $< \
+	 --profile $(word 2,$^) \
+	 --labels false \
+	 --output $$REPORT && \
+	touch $@
 
 # Verify *-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verify/verify-*.rq)
