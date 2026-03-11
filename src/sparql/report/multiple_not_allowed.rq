@@ -1,4 +1,4 @@
-# return all entities with more than one annotation type that where only one is
+# return all entities with more than one annotation type where only one is
 # allowed
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
