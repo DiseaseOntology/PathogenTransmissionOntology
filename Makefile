@@ -14,6 +14,7 @@ EDIT := src/ontology/$(ONT)-edit.owl
 
 # Set the software version(s) to use
 ROBOT_VRS = 1.9.5
+FASTOBO_VRS = 0.4.6
 
 # ***NEVER run make commands in parallel (do NOT use the -j flag)***
 
@@ -69,6 +70,44 @@ check_robot:
 
 build/robot.jar: | build
 	@curl -L -o $@ https://github.com/ontodev/robot/releases/download/v$(ROBOT_VRS)/robot.jar
+
+# ----------------------------------------
+# FASTOBO
+# ----------------------------------------
+
+# fastobo is used to validate OBO structure
+FASTOBO := build/fastobo-validator
+
+.PHONY: check_fastobo
+check_fastobo:
+	@if [[ -f $(FASTOBO) ]]; then \
+		VRS=$$($(FASTOBO) --version) ; \
+		if [[ "$$VRS" != *"$(FASTOBO_VRS)"* ]]; then \
+			printf "\e[1;37mUpdating\e[0m from $$VRS to $(FASTOBO_VRS)...\n" ; \
+			rm -rf build/fastobo-validator && $(MAKE) $(FASTOBO) ; \
+		fi ; \
+	else \
+		printf "\e[1;37mDownloading\e[0m fastobo-validator version $(FASTOBO_VRS)...\n" ; \
+		$(MAKE) $(FASTOBO) ; \
+	fi
+
+$(FASTOBO): | build
+	@if [[ $$(uname -m) == 'x86_64' ]]; then \
+		curl -Lk -o build/fastobo-validator.zip https://github.com/fastobo/fastobo-validator/releases/download/v$(FASTOBO_VRS)/fastobo-validator_null_x86_64-apple-darwin.zip ; \
+		cd build && unzip -DD fastobo-validator.zip fastobo-validator && rm fastobo-validator.zip ; \
+	else \
+		if [[ $$(command -v cargo) != *"cargo" ]]; then \
+			printf "\e[1;33mWARNING:\e[0m fastobo-validator must be built from source on ARM64 machines\n" ; \
+			printf " --> Install the Rust programming language, then repeat desired make command\n" ; \
+			printf "\e[1;33mSKIPPING\e[0m fastobo-validator install\n\n" ; \
+		else \
+			echo "fastobo-validator must be built from source on ARM64 machines, one moment..." ; \
+			cargo install --quiet --root $(dir $@) \
+				--git "https://github.com/fastobo/fastobo-validator/" \
+				--tag "v$(FASTOBO_VRS)" fastobo-validator && \
+			mv build/bin/fastobo-validator $@ && rm -d build/bin ; \
+		fi ; \
+	fi
 
 
 ##########################################
@@ -192,6 +231,31 @@ TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE := $(shell date +'%Y-%m-%d')
 RELEASE_PREFIX := $(OBO)$(ONT)/releases/$(DATE)/
 
+# standardized .obo creation;
+#	args = output,input,version-iri,ontology-iri (optional, use "" to keep from input file)
+define build_obo
+	@ONT_IRI=$(4) ; \
+	 ONT_IRI=$${ONT_IRI:+"--ontology-iri $(4)"} ; \
+	$(ROBOT) query \
+	 --input $(2) \
+	 --update src/sparql/build/remove-ref-type.ru \
+	remove \
+	 --select "parents equivalents" \
+	 --select "anonymous" \
+	remove \
+	 --select imports \
+	 --trim true \
+	annotate \
+	 --version-iri $(3) \
+	 $${ONT_IRI} \
+	convert \
+	 --output $(1)
+    @grep -v ^owl-axioms $(1) | \
+     grep -v ^date | \
+     perl -lpe 'print "date: $(TS)" if $$. == 3' > $(1).tmp.obo && \
+	 mv $(1).tmp.obo $(1)
+endef
+
 # ----------------------------------------
 # RELEASE PRODUCTS
 # ----------------------------------------
@@ -208,15 +272,26 @@ $(PRIMARY).owl: build/$(ONT)-new.owl | check_robot
 	 --output $@
 	@echo "Created $@"
 
+$(PRIMARY).obo: $(PRIMARY).owl | check_robot
+	$(call build_obo,$@,$<,"$(RELEASE_PREFIX)$(notdir $@)","")
+	@echo "Created $@"
+
 
 ##########################################
 ## VERIFY build products
 ##########################################
 
-.PHONY: verify
-verify: $(PRIMARY).owl
+.PHONY: verify-owl validate-obo
+verify: verify-owl validate-obo
+	@echo "Verification complete!"
+
+verify-owl: $(PRIMARY).owl | check_robot
 	@echo ""
 	@$(ROBOT) reason -i $< && echo -e "## $< check passed!"
+
+# Using fastobo-validator
+validate-obo: ${PRIMARY}.obo | check_fastobo
+	@$(FASTOBO) $<
 
 
 ##########################################
