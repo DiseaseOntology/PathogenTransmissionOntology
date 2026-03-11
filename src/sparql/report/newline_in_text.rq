@@ -10,7 +10,7 @@ SELECT DISTINCT ?entity ?property ?value
 WHERE {
 	VALUES ?property {
 		rdfs:label
-		obo:IAO_00001115
+		obo:IAO_0000115
 		oboInOwl:hasExactSynonym
 		oboInOwl:hasBroadSynonym
 		oboInOwl:hasNarrowSynonym
