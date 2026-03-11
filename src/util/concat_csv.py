@@ -25,17 +25,17 @@ import csv
 
 
 def find_csv_files(input_dir, patterns):
-    matches = []
+    matches = set()
     if patterns:
         for pattern in patterns:
             for root, _, files in os.walk(input_dir):
                 for filename in fnmatch.filter(files, pattern):
-                    matches.append(os.path.join(root, filename))
+                    matches.add(os.path.join(root, filename))
     else:
         for root, _, files in os.walk(input_dir):
             for filename in fnmatch.filter(files, "*.csv"):
-                matches.append(os.path.join(root, filename))
-    return matches
+                matches.add(os.path.join(root, filename))
+    return sorted(matches)
 
 
 def concat_csv(category, output_file, input_dir, *patterns):
