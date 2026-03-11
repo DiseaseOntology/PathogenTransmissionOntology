@@ -237,7 +237,7 @@ SubClassOf(obo:TRANS_0000014 obo:TRANS_0000005)
 
 # Class: obo:TRANS_0000015 (biologic transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000015 "Biological transmission is an indirect vector-borne transmission process during which the pathogen is transported, from a reservoir, source or host to another host, within the vector and undergoes part of it's lifecycle in the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000015 "Biological transmission is an indirect vector-borne transmission process during which the pathogen is transported, from a reservoir, source or host to another host, within the vector and undergoes part of its lifecycle in the vector.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:TRANS_0000015 "vector-borne gastro-intestinal")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000015 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000015 "TRANS:0000015")
@@ -387,12 +387,12 @@ AnnotationAssertion(oboInOwl:id obo:TRANS_0000033 "TRANS:0000033")
 AnnotationAssertion(rdfs:label obo:TRANS_0000033 "trans-stadial transmission")
 SubClassOf(obo:TRANS_0000033 obo:TRANS_0000015)
 
-# Class: obo:TRANS_0000034 (veneral transmission)
+# Class: obo:TRANS_0000034 (venereal transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000034 "Veneral transmission is an indirect vector-borne biological transmission process during which the pathogen is transferred to uninfected female vectors in the seminal fluid during copulation.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000034 "Venereal transmission is an indirect vector-borne biological transmission process during which the pathogen is transferred to uninfected female vectors in the seminal fluid during copulation.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000034 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000034 "TRANS:0000034")
-AnnotationAssertion(rdfs:label obo:TRANS_0000034 "veneral transmission")
+AnnotationAssertion(rdfs:label obo:TRANS_0000034 "venereal transmission")
 SubClassOf(obo:TRANS_0000034 obo:TRANS_0000015)
 
 
