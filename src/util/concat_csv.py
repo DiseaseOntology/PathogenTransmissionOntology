@@ -46,7 +46,7 @@ def concat_csv(category, output_file, input_dir, *patterns):
         return
     # Files found
     with open(output_file, "w", newline="") as out_f:
-        writer = None
+        writer = csv.writer(out_f)
         for idx, file in enumerate(files):
             with open(file, newline="") as in_f:
                 reader = csv.reader(in_f)
@@ -54,15 +54,12 @@ def concat_csv(category, output_file, input_dir, *patterns):
                     out_f.write(
                         f"{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
                     )
-                    for row in reader:
-                        writer = writer or csv.writer(out_f)
-                        writer.writerow(row)
                 else:
                     out_f.write(
                         f"\n{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
                     )
-                    for row in reader:
-                        writer.writerow(row)
+                for row in reader:
+                    writer.writerow(row)
     # Optionally, remove input files after concatenation
     for file in files:
         try:
