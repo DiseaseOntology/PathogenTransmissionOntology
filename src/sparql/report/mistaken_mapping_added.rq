@@ -1,0 +1,21 @@
+# Identifies mistaken mappings added to the ontology (none currently exist)
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?entity ?property ?value
+WHERE {
+	VALUES ?property {
+		oboInOwl:hasDbXref
+		skos:exactMatch
+		skos:closeMatch
+		skos:narrowMatch
+		skos:broadMatch
+		skos:relatedMatch
+	}
+	?entity a owl:Class ;
+		?property ?value .
+}

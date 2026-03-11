@@ -1,0 +1,22 @@
+# Workflow for DOID's continuous integration testing
+
+name: Ontology CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  doid_ci:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: CI Tests
+        run: |
+          make ci_test
