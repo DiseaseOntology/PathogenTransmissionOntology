@@ -7,7 +7,7 @@ Concatenates multiple CSV files into a single output CSV file.
 - Accepts a list of file paths as input; files that do not exist are silently skipped.
 - Prepends each input file's content with a header including the category and file name.
 - Removes the input files after concatenation.
-- If no input files exist, the output file is not created and the script exits successfully.
+- If no input files exist, an empty output file is created and the script exits successfully.
 - If the category is 'TEST', exits with error status code 1 after processing.
 
 Usage:
@@ -25,7 +25,8 @@ import argparse
 def concat_csv(category, output_file, input_files):
     files = sorted(f for f in input_files if os.path.isfile(f))
     if not files:
-        # No files exist - do not create output, exit successfully
+        # No files exist - create empty output and exit successfully
+        open(output_file, "w").close()
         return
     # Files found - concatenate into output
     with open(output_file, "w", newline="") as out_f:
