@@ -163,17 +163,21 @@ build/reports/temp/report.tsv.ok: $(EDIT) src/sparql/report/report_profile.txt |
 
 # Verify *-edit.owl
 EDIT_V_QUERIES := $(wildcard src/sparql/verify/edit-verify-*.rq src/sparql/verify/verify-*.rq)
+EDIT_V_RES := $(patsubst src/sparql/verify/%.rq,build/reports/temp/%.csv,$(EDIT_V_QUERIES))
 
 .PRECIOUS: build/reports/edit-verify.csv
 verify-edit: build/reports/edit-verify.csv
 build/reports/edit-verify.csv: $(EDIT) | check_robot build/reports/temp
-	@python3 src/util/clean_existing_csv.py $(word 2,$|) edit-verify-*.csv verify-*.csv
+	@rm -f $(EDIT_V_RES)
 	@$(ROBOT) verify \
 	 --input $< \
 	 --queries $(EDIT_V_QUERIES) \
 	 --fail-on-violation false \
 	 --output-dir $(word 2,$|)
-	@python3 src/util/concat_csv.py TEST $@ $(word 2,$|) edit-verify-*.csv verify-*.csv
+	@python3 src/util/concat_csv.py \
+	 --input $(EDIT_V_RES) \
+	 --category TEST \
+	 --output $@
 
 # ----------------------------------------
 # DIFF

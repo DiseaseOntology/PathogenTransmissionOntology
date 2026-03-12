@@ -2,49 +2,33 @@
 """
 concat_csv.py
 -------------
-Concatenates multiple CSV files from a directory and its subdirectories into a single
-output CSV file.
+Concatenates multiple CSV files into a single output CSV file.
 
-- Accepts one or more filename patterns for input selection (e.g., '*.csv',
-'edit-verify-*.csv').
+- Accepts a list of file paths as input; files that do not exist are silently skipped.
 - Prepends each input file's content with a header including the category and file name.
 - Removes the input files after concatenation.
-- Always creates the output file, even if no input files are found.
-- If the category is 'TEST', exits with error status code 1 after processing.
+- Always creates an output file, even if no input files are found.
+- If the category is 'TEST', exits with error code 1 IF any input files are processed.
 
 Usage:
-    python3 concat_csv.py <category> <output_file> <input_dir> [pattern1 pattern2 ...]
+    python3 concat_csv.py --input [file1 file2 ...] --category <category> --output <output_file>
 
 Example:
-    python3 concat_csv.py TEST output.csv ./data '*.csv' 'edit-verify-*.csv'
+    python3 concat_csv.py --input file1.csv file2.csv --category TEST --output output.csv
 """
 import sys
 import os
-import fnmatch
 import csv
+import argparse
 
 
-def find_csv_files(input_dir, patterns):
-    matches = []
-    if patterns:
-        for pattern in patterns:
-            for root, _, files in os.walk(input_dir):
-                for filename in fnmatch.filter(files, pattern):
-                    matches.append(os.path.join(root, filename))
-    else:
-        for root, _, files in os.walk(input_dir):
-            for filename in fnmatch.filter(files, "*.csv"):
-                matches.append(os.path.join(root, filename))
-    return matches
-
-
-def concat_csv(category, output_file, input_dir, *patterns):
-    files = find_csv_files(input_dir, patterns)
+def concat_csv(category, output_file, input_files):
+    files = sorted(f for f in input_files if os.path.isfile(f))
     if not files:
-        # No files found
+        # No files exist - create empty output and exit successfully
         open(output_file, "w").close()
         return
-    # Files found
+    # Files found - concatenate into output
     with open(output_file, "w", newline="") as out_f:
         writer = None
         for idx, file in enumerate(files):
@@ -63,7 +47,7 @@ def concat_csv(category, output_file, input_dir, *patterns):
                     )
                     for row in reader:
                         writer.writerow(row)
-    # Optionally, remove input files after concatenation
+    # Remove input files after concatenation
     for file in files:
         try:
             os.remove(file)
@@ -74,10 +58,18 @@ def concat_csv(category, output_file, input_dir, *patterns):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
-        print(
-            "Usage: concat_csv.py <category> <output_file> <input_dir> [pattern1 pattern2 ...]",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    concat_csv(sys.argv[1], sys.argv[2], sys.argv[3], *sys.argv[4:])
+    parser = argparse.ArgumentParser(
+        description="Concatenate CSV files into a single output file."
+    )
+    parser.add_argument(
+        "--category", required=True, help="Category label for each section header"
+    )
+    parser.add_argument("--output", required=True, help="Output CSV file path")
+    parser.add_argument(
+        "--input",
+        nargs="+",
+        metavar="file",
+        help="Input CSV file paths (non-existent files are silently skipped)",
+    )
+    args = parser.parse_args()
+    concat_csv(args.category, args.output, args.input)
