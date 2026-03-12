@@ -7,14 +7,14 @@ Concatenates multiple CSV files into a single output CSV file.
 - Accepts a list of file paths as input; files that do not exist are silently skipped.
 - Prepends each input file's content with a header including the category and file name.
 - Removes the input files after concatenation.
-- If no input files exist, an empty output file is created and the script exits successfully.
-- If the category is 'TEST', exits with error status code 1 after processing.
+- Always creates an output file, even if no input files exist.
+- If the category is 'TEST', exits with error code 1 IF any input files are processed.
 
 Usage:
-    python3 concat_csv.py --category <category> --output <output_file> [file1 file2 ...]
+    python3 concat_csv.py --input [file1 file2 ...] --category <category> --output <output_file>
 
 Example:
-    python3 concat_csv.py --category TEST --output output.csv file1.csv file2.csv
+    python3 concat_csv.py --input file1.csv file2.csv --category TEST --output output.csv
 """
 import sys
 import os
@@ -66,10 +66,10 @@ if __name__ == "__main__":
     )
     parser.add_argument("--output", required=True, help="Output CSV file path")
     parser.add_argument(
-        "files",
-        nargs="*",
+        "--input",
+        nargs="+",
         metavar="file",
         help="Input CSV file paths (non-existent files are silently skipped)",
     )
     args = parser.parse_args()
-    concat_csv(args.category, args.output, args.files)
+    concat_csv(args.category, args.output, args.input)
