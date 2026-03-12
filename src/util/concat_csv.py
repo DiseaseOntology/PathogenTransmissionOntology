@@ -30,23 +30,18 @@ def concat_csv(category, output_file, input_files):
         return
     # Files found - concatenate into output
     with open(output_file, "w", newline="") as out_f:
-        writer = None
+        writer = csv.writer(out_f)
         for idx, file in enumerate(files):
             with open(file, newline="") as in_f:
                 reader = csv.reader(in_f)
-                if idx == 0:
-                    out_f.write(
-                        f"{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
-                    )
-                    for row in reader:
-                        writer = writer or csv.writer(out_f)
-                        writer.writerow(row)
-                else:
-                    out_f.write(
-                        f"\n{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
-                    )
-                    for row in reader:
-                        writer.writerow(row)
+                out_f.write(
+                    f"{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
+                )
+                for row in reader:
+                    writer.writerow(row)
+                # write single blank line between sections, but not after the last file
+                if idx != len(files) - 1:
+                    out_f.write("\n")
     # Remove input files after concatenation
     for file in files:
         try:
