@@ -1,0 +1,13 @@
+# Return a count of non-obsolete classes by namespace
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?namespace (COUNT(?class) AS ?count)
+WHERE {
+  ?class a owl:Class .
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+  BIND(REPLACE(str(?class), ".*/([^#_]+).*", "$1") AS ?namespace)
+}
+GROUP BY ?namespace
+ORDER BY ?namespace
