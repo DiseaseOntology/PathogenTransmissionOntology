@@ -50,17 +50,15 @@ def concat_csv(category, output_file, input_dir, *patterns):
         for idx, file in enumerate(files):
             with open(file, newline="") as in_f:
                 reader = csv.reader(in_f)
-                if idx == 0:
-                    out_f.write(
-                        f"{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
-                    )
-                else:
-                    out_f.write(
-                        f"\n{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
-                    )
+                out_f.write(
+                    f"{category}: {os.path.splitext(os.path.basename(file))[0]}\n"
+                )
                 for row in reader:
                     writer.writerow(row)
-    # Optionally, remove input files after concatenation
+                # write single blank line between sections, but not after the last file
+                if idx != len(files) - 1:
+                    out_f.write("\n")
+    # Remove input files after concatenation
     for file in files:
         try:
             os.remove(file)
