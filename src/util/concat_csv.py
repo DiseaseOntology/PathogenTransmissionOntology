@@ -7,7 +7,7 @@ Concatenates multiple CSV files into a single output CSV file.
 - Accepts a list of file paths as input; files that do not exist are silently skipped.
 - Prepends each input file's content with a header including the category and file name.
 - Removes the input files after concatenation.
-- Always creates an output file, even if no input files exist.
+- Always creates an output file, even if no input files are found.
 - If the category is 'TEST', exits with error code 1 IF any input files are processed.
 
 Usage:
