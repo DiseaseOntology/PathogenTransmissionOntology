@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/trans.owl/>)
+Prefix(:=<http://purl.obolibrary.org/obo/trans.owl#>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -118,14 +118,14 @@ AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
 # Class: obo:TRANS_0000000 (transmission process)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://courses.lumenlearning.com/microbiology/chapter/modes-of-disease-transmission/") Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000000 "A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") Annotation(oboInOwl:hasDbXref "https://www.nursinghero.com/study-guides/microbiology/modes-of-disease-transmission") obo:IAO_0000115 obo:TRANS_0000000 "A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000000 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000000 "TRANS:0000000")
 AnnotationAssertion(rdfs:label obo:TRANS_0000000 "transmission process")
 
 # Class: obo:TRANS_0000001 (direct transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://dhss.delaware.gov/dph/files/directindtranspi.pdf") Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000001 "Direct transmission is a transmission process that is the means during which the pathogen is transmitted immediately from a reservoir, source or host to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000001 "Direct transmission is a transmission process that is the means during which the pathogen is transmitted immediately from a reservoir, source or host to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000001 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000001 "TRANS:0000001")
 AnnotationAssertion(rdfs:label obo:TRANS_0000001 "direct transmission")
@@ -133,7 +133,7 @@ SubClassOf(obo:TRANS_0000001 obo:TRANS_0000000)
 
 # Class: obo:TRANS_0000002 (indirect transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000002 "Indirect transmission is a transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by intermediary vehicles, vectors or as airborne dust particles.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000002 "Indirect transmission is a transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by intermediary vehicles, vectors or as airborne dust particles.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000002 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000002 "TRANS:0000002")
 AnnotationAssertion(rdfs:label obo:TRANS_0000002 "indirect transmission")
@@ -141,7 +141,7 @@ SubClassOf(obo:TRANS_0000002 obo:TRANS_0000000)
 
 # Class: obo:TRANS_0000003 (mechanical transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000003 "Mechanical transmission is an indirect vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by being transported on the external surface of the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000003 "Mechanical transmission is an indirect vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by being transported on the external surface of the vector.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000003 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000003 "TRANS:0000003")
 AnnotationAssertion(rdfs:label obo:TRANS_0000003 "mechanical transmission")
@@ -156,7 +156,7 @@ AnnotationAssertion(owl:deprecated obo:TRANS_0000004 "true"^^xsd:boolean)
 
 # Class: obo:TRANS_0000005 (vector-borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Vector_(epidemiology)") Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000005 "Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Disease_vector") obo:IAO_0000115 obo:TRANS_0000005 "Vector-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host. Most vectors are arthropods such as mosquitoes, fleas, and ticks.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000005 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000005 "TRANS:0000005")
 AnnotationAssertion(rdfs:label obo:TRANS_0000005 "vector-borne transmission")
@@ -164,7 +164,7 @@ SubClassOf(obo:TRANS_0000005 obo:TRANS_0000002)
 
 # Class: obo:TRANS_0000006 (congenital transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.m-w.com/dictionary/congenital") obo:IAO_0000115 obo:TRANS_0000006 "Congenital transmission is a direct transmission process during which the pathogen is transmitted directly from mother to child at or around the time of birth.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.merriam-webster.com/dictionary/congenital") obo:IAO_0000115 obo:TRANS_0000006 "Congenital transmission is a direct transmission process during which the pathogen is transmitted directly from mother to child at or around the time of birth.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:TRANS_0000006 "mother-to-child transmission")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000006 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000006 "TRANS:0000006")
@@ -173,7 +173,7 @@ SubClassOf(obo:TRANS_0000006 obo:TRANS_0000001)
 
 # Class: obo:TRANS_0000007 (contact transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000007 "Contact transmission is a direct transmission process during which the pathogen is transmitted from a reservoir, source or host to another host by kissing, skin-to-skin contact, sexual intercourse, or by contact with soil or vegetation containing the pathogen.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000007 "Contact transmission is a direct transmission process during which the pathogen is transmitted from a reservoir, source or host to another host by kissing, skin-to-skin contact, sexual intercourse, or by contact with soil or vegetation containing the pathogen.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000007 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000007 "TRANS:0000007")
 AnnotationAssertion(rdfs:label obo:TRANS_0000007 "contact transmission")
@@ -181,7 +181,7 @@ SubClassOf(obo:TRANS_0000007 obo:TRANS_0000001)
 
 # Class: obo:TRANS_0000008 (droplet spread transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000008 "Droplet spread transmission is a direct transmission process during which the pathogen is transmitted from a reservoir, source or host to another host by spray of aerosols over a short distance, spray from sneezing, coughing or talking.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000008 "Droplet spread transmission is a direct transmission process during which the pathogen is transmitted from a reservoir, source or host to another host by spray of aerosols over a short distance, spray from sneezing, coughing or talking.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000008 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000008 "TRANS:0000008")
 AnnotationAssertion(rdfs:label obo:TRANS_0000008 "droplet spread transmission")
@@ -197,7 +197,7 @@ SubClassOf(obo:TRANS_0000009 obo:TRANS_0000002)
 
 # Class: obo:TRANS_0000010 (vehicle-borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000010 "Vehicle-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by inanimate intermediary vehicle objects.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000010 "Vehicle-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by inanimate intermediary vehicle objects.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000010 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000010 "TRANS:0000010")
 AnnotationAssertion(rdfs:label obo:TRANS_0000010 "vehicle-borne transmission")
@@ -205,7 +205,7 @@ SubClassOf(obo:TRANS_0000010 obo:TRANS_0000002)
 
 # Class: obo:TRANS_0000011 (vehicle-borne fomite transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000011 "Vehicle-borne fomite transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by inanimate objects including: medical instruments, cloth, fur, metal or plastic utensils.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000011 "Vehicle-borne fomite transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by inanimate objects including: medical instruments, cloth, fur, metal or plastic utensils.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000011 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000011 "TRANS:0000011")
 AnnotationAssertion(rdfs:label obo:TRANS_0000011 "vehicle-borne fomite transmission")
@@ -213,7 +213,7 @@ SubClassOf(obo:TRANS_0000011 obo:TRANS_0000010)
 
 # Class: obo:TRANS_0000012 (vehicle-borne ingestion transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000012 "Vehicle-borne ingestion transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by ingestion of fluids or foods or food products including: food, water, milk, or meat products.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000012 "Vehicle-borne ingestion transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by ingestion of fluids or foods or food products including: food, water, milk, or meat products.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000012 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000012 "TRANS:0000012")
 AnnotationAssertion(rdfs:label obo:TRANS_0000012 "vehicle-borne ingestion transmission")
@@ -221,7 +221,7 @@ SubClassOf(obo:TRANS_0000012 obo:TRANS_0000010)
 
 # Class: obo:TRANS_0000013 (vehicle-borne medical transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000013 "Vehicle-borne medical transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by biological products including: blood, serum, plasma, tissue, or organs.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000013 "Vehicle-borne medical transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by biological products including: blood, serum, plasma, tissue, or organs.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000013 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000013 "TRANS:0000013")
 AnnotationAssertion(rdfs:label obo:TRANS_0000013 "vehicle-borne medical transmission")
@@ -229,7 +229,7 @@ SubClassOf(obo:TRANS_0000013 obo:TRANS_0000010)
 
 # Class: obo:TRANS_0000014 (vector-borne bite transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000014 "Vector-borne bite transmission is an indirect vector-borne transmission during which the pathogen is indirectly transferred by insect bites from a reservoir, source or host via a vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000014 "Vector-borne bite transmission is an indirect vector-borne transmission during which the pathogen is indirectly transferred by insect bites from a reservoir, source or host via a vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000014 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000014 "TRANS:0000014")
 AnnotationAssertion(rdfs:label obo:TRANS_0000014 "vector-borne bite transmission")
@@ -237,7 +237,7 @@ SubClassOf(obo:TRANS_0000014 obo:TRANS_0000005)
 
 # Class: obo:TRANS_0000015 (biologic transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000015 "Biological transmission is an indirect vector-borne transmission process during which the pathogen is transported, from a reservoir, source or host to another host, within the vector and undergoes part of its lifecycle in the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000015 "Biological transmission is an indirect vector-borne transmission process during which the pathogen is transported, from a reservoir, source or host to another host, within the vector and undergoes part of its lifecycle in the vector.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:TRANS_0000015 "vector-borne gastro-intestinal")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000015 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000015 "TRANS:0000015")
@@ -260,7 +260,7 @@ AnnotationAssertion(owl:deprecated obo:TRANS_0000017 "true"^^xsd:boolean)
 
 # Class: obo:TRANS_0000018 (placental transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.nlm.nih.gov/medlineplus/mplusdictionary.html") obo:IAO_0000115 obo:TRANS_0000018 "Placental transmission is a congenital transmission process during which the pathogen is transmitted directly from mother to child across the placental barrier.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.thefreelibrary.com/Chapter+1+Zoonotic+disease+history-a0183367841") obo:IAO_0000115 obo:TRANS_0000018 "Placental transmission is a congenital transmission process during which the pathogen is transmitted directly from mother to child across the placental barrier.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000018 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000018 "TRANS:0000018")
 AnnotationAssertion(rdfs:label obo:TRANS_0000018 "placental transmission")
@@ -268,7 +268,7 @@ SubClassOf(obo:TRANS_0000018 obo:TRANS_0000006)
 
 # Class: obo:TRANS_0000019 (arthropod borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000019 "Arthropod borne transmission is a vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary arthropod vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000019 "Arthropod borne transmission is a vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary arthropod vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000019 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000019 "TRANS:0000019")
 AnnotationAssertion(rdfs:label obo:TRANS_0000019 "arthropod borne transmission")
@@ -276,7 +276,7 @@ SubClassOf(obo:TRANS_0000019 obo:TRANS_0000005)
 
 # Class: obo:TRANS_0000020 (insect borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.cals.ncsu.edu/course/ent425/text18/humanvectors.html") obo:IAO_0000115 obo:TRANS_0000020 "Insect borne transmission is an arthropod vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary insect vector such as a flea or mosquito to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.nursinghero.com/study-guides/microbiology/modes-of-disease-transmission") obo:IAO_0000115 obo:TRANS_0000020 "Insect borne transmission is an arthropod vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary insect vector such as a flea or mosquito to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000020 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000020 "TRANS:0000020")
 AnnotationAssertion(rdfs:label obo:TRANS_0000020 "insect borne transmission")
@@ -284,7 +284,7 @@ SubClassOf(obo:TRANS_0000020 obo:TRANS_0000019)
 
 # Class: obo:TRANS_0000021 (mosquito borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Mosquito") obo:IAO_0000115 obo:TRANS_0000021 "Mosquito borne transmission is an insect borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary mosquito vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Mosquito") obo:IAO_0000115 obo:TRANS_0000021 "Mosquito borne transmission is an insect borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary mosquito vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000021 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000021 "TRANS:0000021")
 AnnotationAssertion(rdfs:label obo:TRANS_0000021 "mosquito borne transmission")
@@ -292,7 +292,7 @@ SubClassOf(obo:TRANS_0000021 obo:TRANS_0000020)
 
 # Class: obo:TRANS_0000022 (Anopheles gambiae borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Mosquito") obo:IAO_0000115 obo:TRANS_0000022 "Anopheles gambiae borne transmission is a mosquito borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary mosquito vector of the species Anopheles gambiae to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Mosquito") obo:IAO_0000115 obo:TRANS_0000022 "Anopheles gambiae borne transmission is a mosquito borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary mosquito vector of the species Anopheles gambiae to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000022 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000022 "TRANS:0000022")
 AnnotationAssertion(rdfs:label obo:TRANS_0000022 "Anopheles gambiae borne transmission")
@@ -300,7 +300,7 @@ SubClassOf(obo:TRANS_0000022 obo:TRANS_0000021)
 
 # Class: obo:TRANS_0000023 (flea borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Flea") obo:IAO_0000115 obo:TRANS_0000023 "Flea borne transmission is an insect borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary flea vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Flea") obo:IAO_0000115 obo:TRANS_0000023 "Flea borne transmission is an insect borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary flea vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000023 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000023 "TRANS:0000023")
 AnnotationAssertion(rdfs:label obo:TRANS_0000023 "flea borne transmission")
@@ -308,7 +308,7 @@ SubClassOf(obo:TRANS_0000023 obo:TRANS_0000020)
 
 # Class: obo:TRANS_0000024 (tick borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Tick") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Vector_%28disease%29") obo:IAO_0000115 obo:TRANS_0000024 "Tick borne transmission is an arachnid borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary tick vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Disease_vector") Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Tick") obo:IAO_0000115 obo:TRANS_0000024 "Tick borne transmission is an arachnid borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary tick vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000024 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000024 "TRANS:0000024")
 AnnotationAssertion(rdfs:label obo:TRANS_0000024 "tick borne transmission")
@@ -316,7 +316,7 @@ SubClassOf(obo:TRANS_0000024 obo:TRANS_0000027)
 
 # Class: obo:TRANS_0000025 (copepod borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000025 "Copepod borne transmission is a vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary copepod vector to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000025 "Copepod borne transmission is a vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary copepod vector to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000025 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000025 "TRANS:0000025")
 AnnotationAssertion(rdfs:label obo:TRANS_0000025 "copepod borne transmission")
@@ -324,7 +324,7 @@ SubClassOf(obo:TRANS_0000025 obo:TRANS_0000005)
 
 # Class: obo:TRANS_0000026 (Dracunculus medinensis borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000026 "Dracunculus medinensis borne transmission is a copepod borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary copepod vector of the species Dracunculus medinensis to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section10.html") obo:IAO_0000115 obo:TRANS_0000026 "Dracunculus medinensis borne transmission is a copepod borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary copepod vector of the species Dracunculus medinensis to another host.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:TRANS_0000026 "Guinea worm borne")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000026 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000026 "TRANS:0000026")
@@ -333,7 +333,7 @@ SubClassOf(obo:TRANS_0000026 obo:TRANS_0000025)
 
 # Class: obo:TRANS_0000027 (arachnid borne transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Vector_%28disease%29") obo:IAO_0000115 obo:TRANS_0000027 "Arachnid borne transmission is an arthropod vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary arthropod vector such as a tick to another host.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Disease_vector") obo:IAO_0000115 obo:TRANS_0000027 "Arachnid borne transmission is an arthropod vector-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an intermediary arthropod vector such as a tick to another host.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000027 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000027 "TRANS:0000027")
 AnnotationAssertion(rdfs:label obo:TRANS_0000027 "arachnid borne transmission")
@@ -341,7 +341,7 @@ SubClassOf(obo:TRANS_0000027 obo:TRANS_0000019)
 
 # Class: obo:TRANS_0000028 (propagative transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000028 "Propagative transmission is an indirect vector-borne biological transmission process during which the pathogen that is ingested with the blood meal undergoes simple multiplication in the body of the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://doi.org/10.32873/unl.dc.ciap070") Annotation(oboInOwl:hasDbXref "https://pressbooks.nebraska.edu/ciap/chapter/chapter-4/") obo:IAO_0000115 obo:TRANS_0000028 "Propagative transmission is an indirect vector-borne biological transmission process during which the pathogen that is ingested with the blood meal undergoes simple multiplication in the body of the vector.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000028 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000028 "TRANS:0000028")
 AnnotationAssertion(rdfs:label obo:TRANS_0000028 "propagative transmission")
@@ -349,7 +349,7 @@ SubClassOf(obo:TRANS_0000028 obo:TRANS_0000015)
 
 # Class: obo:TRANS_0000029 (cyclopropagative transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000029 "Cyclopropagative transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes a developmental cycle (changes from one stage to another) as well as multiplication in the body of the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://doi.org/10.32873/unl.dc.ciap070") Annotation(oboInOwl:hasDbXref "https://pressbooks.nebraska.edu/ciap/chapter/chapter-4/") obo:IAO_0000115 obo:TRANS_0000029 "Cyclopropagative transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes a developmental cycle (changes from one stage to another) as well as multiplication in the body of the vector.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000029 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000029 "TRANS:0000029")
 AnnotationAssertion(rdfs:label obo:TRANS_0000029 "cyclopropagative transmission")
@@ -357,7 +357,7 @@ SubClassOf(obo:TRANS_0000029 obo:TRANS_0000015)
 
 # Class: obo:TRANS_0000030 (cyclodevelopmental transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000030 "Cyclodevelopmental transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes developmental changes from one stage to another, but does not multiply.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://doi.org/10.32873/unl.dc.ciap070") Annotation(oboInOwl:hasDbXref "https://pressbooks.nebraska.edu/ciap/chapter/chapter-4/") obo:IAO_0000115 obo:TRANS_0000030 "Cyclodevelopmental transmission is an indirect vector-borne biological transmission process during which the pathogen undergoes developmental changes from one stage to another, but does not multiply.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000030 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000030 "TRANS:0000030")
 AnnotationAssertion(rdfs:label obo:TRANS_0000030 "cyclodevelopmental transmission")
@@ -365,7 +365,7 @@ SubClassOf(obo:TRANS_0000030 obo:TRANS_0000015)
 
 # Class: obo:TRANS_0000031 (transovarial transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000031 "Transovarial transmission is an indirect vector-borne biological transmission process during which the pathogen is transmitted from the female parent through the eggs to the offspring and the developing egg is infected.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://pubmed.ncbi.nlm.nih.gov/15463476/") Annotation(oboInOwl:hasDbXref "https://www.cdc.gov/tick-borne-encephalitis/php/transmission/index.html") obo:IAO_0000115 obo:TRANS_0000031 "Transovarial transmission is an indirect vector-borne biological transmission process during which the pathogen is transmitted from the female parent through the eggs to the offspring and the developing egg is infected.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000031 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000031 "TRANS:0000031")
 AnnotationAssertion(rdfs:label obo:TRANS_0000031 "transovarial transmission")
@@ -381,7 +381,9 @@ SubClassOf(obo:TRANS_0000032 obo:TRANS_0000015)
 
 # Class: obo:TRANS_0000033 (trans-stadial transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000033 "Trans-stadial transmission is an indirect vector-borne biological transmission process during which the newly hatched larval stages are infected with the pathogen, which is then transmitted to subsequent development stages of the vector.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Transstadial_transmission") obo:IAO_0000115 obo:TRANS_0000033 "Trans-stadial transmission is an indirect vector-borne biological transmission process during which the newly hatched larval stages are infected with the pathogen, which is then transmitted to subsequent development stages of the vector.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TRANS_0000033 "https://www.cdc.gov/tick-borne-encephalitis/php/transmission/index.html")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TRANS_0000033 "transstadial transmission")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000033 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000033 "TRANS:0000033")
 AnnotationAssertion(rdfs:label obo:TRANS_0000033 "trans-stadial transmission")
@@ -389,7 +391,7 @@ SubClassOf(obo:TRANS_0000033 obo:TRANS_0000015)
 
 # Class: obo:TRANS_0000034 (venereal transmission)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.oie.int/doc/ged/D6818.PDF") obo:IAO_0000115 obo:TRANS_0000034 "Venereal transmission is an indirect vector-borne biological transmission process during which the pathogen is transferred to uninfected female vectors in the seminal fluid during copulation.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://pmc.ncbi.nlm.nih.gov/articles/PMC6136804/") obo:IAO_0000115 obo:TRANS_0000034 "Venereal transmission is an indirect vector-borne biological transmission process during which the pathogen is transferred to uninfected female vectors in the seminal fluid during copulation.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:TRANS_0000034 "transmission_process")
 AnnotationAssertion(oboInOwl:id obo:TRANS_0000034 "TRANS:0000034")
 AnnotationAssertion(rdfs:label obo:TRANS_0000034 "venereal transmission")
