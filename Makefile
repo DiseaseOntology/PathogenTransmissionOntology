@@ -12,6 +12,9 @@ ONT := trans
 OBO := http://purl.obolibrary.org/obo/
 EDIT := src/ontology/$(ONT)-edit.owl
 
+# define the release directory
+REL_DIR := src/ontology
+
 # Set the software version(s) to use
 ROBOT_VRS = 1.9.5
 FASTOBO_VRS = 0.4.6
@@ -232,7 +235,6 @@ build/reports/diff.tsv: build/$(ONT)-last.owl build/$(ONT)-new.owl | check_robot
 ## RELEASE PRODUCTS
 ##########################################
 
-REL_DIR := src/ontology
 PRIMARY = $(REL_DIR)/$(ONT)
 
 .PHONY: products
@@ -293,15 +295,17 @@ $(PRIMARY).obo: $(PRIMARY).owl | check_robot
 ## VERIFY build products
 ##########################################
 
-.PHONY: verify-owl validate-obo
+.PHONY: verify
 verify: verify-owl validate-obo
 	@echo "Verification complete!"
 
+.PHONY: verify-owl
 verify-owl: $(PRIMARY).owl | check_robot
 	@echo ""
-	@$(ROBOT) reason -i $< && echo -e "## $< check passed!"
+	@$(ROBOT) reason -i $< && echo "## $< check passed!"
 
 # Using fastobo-validator
+.PHONY: validate-obo
 validate-obo: ${PRIMARY}.obo | check_fastobo
 	@$(FASTOBO) $<
 
