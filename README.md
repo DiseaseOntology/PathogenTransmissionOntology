@@ -1,4 +1,5 @@
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/56891358.svg)](https://doi.org/10.5281/zenodo.10069579)
 [![Build Status](https://github.com/DiseaseOntology/PathogenTransmissionOntology/workflows/Ontology%20CI/badge.svg)](https://github.com/DiseaseOntology/PathogenTransmissionOntology/actions)
 <!-- badges: end -->
 
